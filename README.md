@@ -197,10 +197,31 @@ function listener(e) {
 <ul id="output">
 </ul>
 ```
+## @keyframes
+The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than transitions.
 
-
-
-
+```css
+@keyframes identifier {
+  0% { top: 0; left: 0; }
+  30% { top: 50px; }
+  75%{ left: 50px; }
+  100% { top: 100px; left: 100%; }
+}
 ```
-transistion: transistion-property duration delay timing function;
+
+```css
+@keyframes <keyframes-name> {
+  <keyframe-block-list>
+}
+where 
+<keyframes-name> = <custom-ident> | <string>
+<keyframe-block-list> = <keyframe-block>+
+
+where 
+<keyframe-block> = <keyframe-selector># {
+  <declaration-list>
+}
+
+where 
+<keyframe-selector> = from | to | <percentage>
 ```
