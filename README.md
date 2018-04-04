@@ -290,3 +290,5 @@ animation: 3s linear 1s slidein;
 /* @keyframes duration | name */
 animation: 3s slidein;
 ```
+Reference example from [MDN](https://interactive-examples.mdn.mozilla.net/pages/css/animation.html).
+
