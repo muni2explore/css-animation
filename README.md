@@ -225,3 +225,68 @@ where
 where 
 <keyframe-selector> = from | to | <percentage>
 ```
+## animation
+The animation CSS property is a shorthand property for the various animation properties: animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and animation-play-state.
+
+```css
+#circle {
+    background-color: #1766aa;
+    margin: 20px;
+    border: 5px solid #333;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%
+}
+
+@-webkit-keyframes slidein {
+    from {
+        margin-left: -20%
+    }
+
+    to {
+        margin-left: 100%
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-left: -20%
+    }
+
+    to {
+        margin-left: 100%
+    }
+}
+```
+#1
+```css
+animation: slidein 3s ease-in 1s infinite reverse both running;
+```
+#2
+```css
+animation: slidein 3s linear 1s infinite running;
+```
+#3
+```css
+animation: slidein 3s linear 1s infinite alternate;
+```
+#4
+```css
+animation: slidein .5s linear 1s infinite alternate;
+
+
+```html
+<div id="circle"></div>
+```
+
+```css
+/* @keyframes duration | timing-function | delay | 
+iteration-count | direction | fill-mode | play-state | name */
+animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+/* @keyframes duration | timing-function | delay | name */
+animation: 3s linear 1s slidein;
+
+/* @keyframes duration | name */
+animation: 3s slidein;
+```
