@@ -401,3 +401,10 @@ animation-delay: 2s;
 /*****Third ****/
 animation-delay: -2s;
 ```
+## animation-direction
+The animation-direction CSS property specifies whether an animation should play forwards, backwards, or alternating back and forth.
+```css
+<single-animation-direction>#
+where 
+<single-animation-direction> = normal | reverse | alternate | alternate-reverse
+```
