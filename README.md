@@ -408,3 +408,44 @@ The animation-direction CSS property specifies whether an animation should play 
 where 
 <single-animation-direction> = normal | reverse | alternate | alternate-reverse
 ```
+## animation-fill-mode
+The animation-fill-mode CSS property specifies how a CSS animation should apply styles to its target before and after its execution.
+```css
+<single-animation-fill-mode>#
+where 
+<single-animation-fill-mode> = none | forwards | backwards | both
+```
+### forwards
+The target will retain the computed values set by the last keyframe encountered during execution. The last keyframe depends on the value of animation-direction and animation-iteration-count:
+
+### backwards
+The animation will apply the values defined in the first relevant keyframe as soon as it is applied to the target, and retain this during the animation-delay period. The first relevant keyframe depends on the value of animation-direction:
+```css
+.demo {
+  border-top: 100px solid #ccc;
+  height: 300px;
+}
+
+@keyframes grow {
+  0% { font-size: 0; }
+  100% { font-size: 40px; }
+}
+.demo:hover .grows {
+  animation-name: grow;
+  animation-duration: 3s;
+}
+
+.demo:hover .growsandstays {
+  animation-name: grow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+```
+
+```html
+<p>Move your mouse over the gray box!</p>
+<div class="demo">
+ <div class="growsandstays">This grows and stays big.</div>
+  <div class="grows">This just grows.</div>
+</div>
+```
