@@ -449,3 +449,47 @@ The animation will apply the values defined in the first relevant keyframe as so
   <div class="grows">This just grows.</div>
 </div>
 ```
+## animation-play-state
+
+The animation-play-state CSS property specifies whether an animation is running or paused. In JavaScript, this can be queried to determine whether or not the animation is currently running. In addition, you can use JavaScript to set its value to pause or resume playback of an animation.
+```css
+<single-animation-play-state>#
+where 
+<single-animation-play-state> = running | paused
+```
+## animation-timing-function
+The animation-timing-function CSS property specifies how a CSS animation should progress over the duration of each cycle.
+```css
+/* Keyword values */
+animation-timing-function: ease;
+animation-timing-function: ease-in;
+animation-timing-function: ease-out;
+animation-timing-function: ease-in-out;
+animation-timing-function: linear;
+animation-timing-function: step-start;
+animation-timing-function: step-end;
+
+/* Function values */
+animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: steps(4, end);
+animation-timing-function: frames(10);
+
+/* Multiple animations */
+animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+
+/* Global values */
+animation-timing-function: inherit;
+animation-timing-function: initial;
+animation-timing-function: unset;
+```
+
+```css
+<single-timing-function>#
+where 
+<single-timing-function> = linear | <cubic-bezier-timing-function> | <step-timing-function> | <frames-timing-function>
+
+where 
+<cubic-bezier-timing-function> = ease | ease-in | ease-out | ease-in-out | cubic-bezier(<number>, <number>, <number>, <number>)
+<step-timing-function> = step-start | step-end | steps(<integer>[, [ start | end ] ]?)
+<frames-timing-function> = frames(<integer>)
+```
