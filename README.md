@@ -317,3 +317,87 @@ Reference example from [MDN](https://interactive-examples.mdn.mozilla.net/pages/
 <div class="animation a3"></div>
 ```
 Reference example from [MDN](https://mdn.mozillademos.org/en-US/docs/Web/CSS/animation$samples/animation?revision=1367951).
+#### Formal syntax
+```css
+<single-animation>#
+where 
+<single-animation> = <time> || <single-timing-function> || <time> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state> || [ none | <keyframes-name> ]
+
+where 
+<single-timing-function> = linear | <cubic-bezier-timing-function> | <step-timing-function> | <frames-timing-function>
+<single-animation-iteration-count> = infinite | <number>
+<single-animation-direction> = normal | reverse | alternate | alternate-reverse
+<single-animation-fill-mode> = none | forwards | backwards | both
+<single-animation-play-state> = running | paused
+<keyframes-name> = <custom-ident> | <string>
+
+where 
+<cubic-bezier-timing-function> = ease | ease-in | ease-out | ease-in-out | cubic-bezier(<number>, <number>, <number>, <number>)
+<step-timing-function> = step-start | step-end | steps(<integer>[, [ start | end ] ]?)
+<frames-timing-function> = frames(<integer>)
+```
+## animation-delay
+The animation-delay CSS property specifies when an animation should start. You can begin the animation at a future point in time, immediately and from its begining, or immediately and partway through the animation cycle.
+```css
+#circle {
+    background-color: #1766aa;
+    color: #fff;
+    margin: auto;
+    margin-left: 0;
+    border: 5px solid #333;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+#playstatus {
+    font-weight: 700
+}
+
+.animating {
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 2;
+    animation-direction: alternate
+}
+
+@-webkit-keyframes slide {
+    from {
+        background-color: orange;
+        color: #000;
+        margin-left: 0
+    }
+
+    to {
+        background-color: orange;
+        color: #000;
+        margin-left: 80%
+    }
+}
+
+@keyframes slide {
+    from {
+        background-color: orange;
+        color: #000;
+        margin-left: 0
+    }
+
+    to {
+        background-color: orange;
+        color: #000;
+        margin-left: 80%
+    }
+}
+
+/*****First ****/
+animation-delay: 250ms;
+/*****Second ****/
+animation-delay: 2s;
+/*****Third ****/
+animation-delay: -2s;
+```
