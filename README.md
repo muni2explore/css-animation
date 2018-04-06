@@ -292,3 +292,28 @@ animation: 3s slidein;
 ```
 Reference example from [MDN](https://interactive-examples.mdn.mozilla.net/pages/css/animation.html).
 
+### Gmail like Loader Animation
+
+```css
+@keyframes slidein {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.a1 { animation: 3s ease-in 1s 2 reverse both paused slidein; }
+.a2 { animation: 3s linear 1s slidein; }
+.a3 { animation: 3s slidein; }
+
+.animation {
+  background: #3F87A6;
+  width: 100%;
+  height: calc(100% - 1.5em);
+  transform-origin: left center;
+}
+```
+```html
+<div class="animation a1"></div>
+<div class="animation a2"></div>
+<div class="animation a3"></div>
+```
+Reference example from [MDN](https://mdn.mozillademos.org/en-US/docs/Web/CSS/animation$samples/animation?revision=1367951).
