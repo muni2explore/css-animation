@@ -3,6 +3,8 @@
 
 [An Introduction and Guide to the CSS Object Model (CSSOM)](https://css-tricks.com/an-introduction-and-guide-to-the-css-object-model-cssom/)
 
+[Managing Flow and Rhythm with CSS Custom Properties](https://24ways.org/2018/managing-flow-and-rhythm-with-css-custom-properties/)
+
 ## animation
 
 CSS Animations is a module of CSS that lets you animate the values of CSS properties over time.
