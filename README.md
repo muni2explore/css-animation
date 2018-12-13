@@ -1,4 +1,7 @@
 # CSS Animation
+> Some Important Links
+
+[An Introduction and Guide to the CSS Object Model (CSSOM)](https://css-tricks.com/an-introduction-and-guide-to-the-css-object-model-cssom/)
 
 ## animation
 
