@@ -5,6 +5,8 @@
 
 [Managing Flow and Rhythm with CSS Custom Properties](https://24ways.org/2018/managing-flow-and-rhythm-with-css-custom-properties/)
 
+[A CSS Venn Diagram](http://adrianroselli.com/2018/12/a-css-venn-diagram.html)
+
 ## animation
 
 CSS Animations is a module of CSS that lets you animate the values of CSS properties over time.
