@@ -2,6 +2,7 @@
 
 ## Reference
 [Portfolio SASS](https://github.com/codeStACKr/portfolio-sass)
+[Znck Blog](https://github.com/znck/znck.dev)
 
 ## SCSS - MAPS
 
