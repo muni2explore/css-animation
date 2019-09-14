@@ -70,3 +70,19 @@ body{
   font-weight: weight(bold);
 }
 ```
+
+## mixin
+don's repeat styles
+
+```scss
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  @include flexCenter;
+}
+
+```
