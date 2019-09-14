@@ -128,3 +128,26 @@ don's repeat styles
 }
 
 ```
+
+## extend
+
+```scss
+.para{
+  font-weight: weight(bold);
+}
+
+.para1{
+  @extend .para;
+  font-weight: weight(bold);
+}
+```
+
+## for loop
+
+```scss
+@for $i from 1 through 4 {
+  .menu-nav__item:nth-child(#{$i}){
+     transistion-delay: ($i * 0.1s) + 0.15s;
+  }
+}
+```
