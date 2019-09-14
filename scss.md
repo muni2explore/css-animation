@@ -50,3 +50,23 @@ into
   font-weight: 400;
 }
 ```
+
+## function
+
+```scss
+
+$font-weights:(
+  'regular': 400,
+  'medium': 500,
+  'bold': 700
+)
+
+@function weight($weight-name) {
+  return map-get($font-weights, $weight-name);
+}
+
+
+body{
+  font-weight: weight(bold);
+}
+```
