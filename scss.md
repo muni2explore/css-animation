@@ -113,3 +113,18 @@ don's repeat styles
   @include theme($light-theme: true);
 }
 ```
+
+
+```scss
+@mixin mobile {
+  @media (max-width: $mobile) {
+     @content;
+  }
+}
+
+
+@include mobile{
+  flex-direction: column;
+}
+
+```
