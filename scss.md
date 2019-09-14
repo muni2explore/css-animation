@@ -86,3 +86,30 @@ don's repeat styles
 }
 
 ```
+
+```scss
+@mixin flexCenter1($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.main {
+  @include flexCenter(row);
+}
+
+```
+
+```scss
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background: lighten($primary-color, 100%);
+    color: darken($text-color, 100%);
+  } 
+}
+
+.light {
+  @include theme($light-theme: true);
+}
+```
